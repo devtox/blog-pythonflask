@@ -14,12 +14,40 @@ In order to help keep this article shorter, I have decided to split it into two 
 
 ## Installation of flask
 
-On Linux systems: 
+There are a few steps involved in installing Flask. First, you will need to install the Python 3 programming language on your computer. Then, you will need to install the Flask framework. Finally, you will need to create the software (a file called app.py) in order to run your Flask application.
+
+Python 3 can be downloaded from the official Python website ([https://www.python.org/](https://www.python.org)). Once you have downloaded and installed Python 3, you will need to open up a new terminal window and type in the following command: *pip3 install flask*. This should begin the process of installing Flask on your computer.
+
+It's recommended to install Flask inside a project environment (virtual environment), so that the version your program depends on doesn't conflict with your system.To do so, make sure virtualenv is installed, you can do so with pip:
 
 ```
-sudo pip3 install flask
-sudo pip install flask
+pip install virtualenv
 ```
+
+Then setup the virtual environment 
+
+```
+mkdir newproj
+cd newproj
+virtualenv venv
+```
+
+Then active the environment
+
+```
+# linux
+venv/bin/activate
+# windows
+venv\scripts\activate
+```
+
+And finally, install Flask and whichever other modules you need in that virtual environment.
+
+```
+pip3 install flask
+```
+
+After Flask has finished installing, you will need to create a new file called app.py in order to write your code. You can do this using any text editor such as VSCode or vim.
 
 <br />
 
