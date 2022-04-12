@@ -92,11 +92,11 @@ header > nav {
 // our main content wrapper, the width scales with font size
 main {
   width: 100%;
-  max-width: 52rem;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
   grid-column: main;
-  display: grid;
+  display: block;
   padding-top: 8rem;
   padding-bottom: 8rem;
   @media screen and (min-width: $screen-md-min) {
