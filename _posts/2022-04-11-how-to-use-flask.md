@@ -101,6 +101,38 @@ def show1(name):
     return '<h1>Name is: %s</h1>' % name
 ```
 
+## Json
+
+While functions can return strings (a sequence of characters) they can also return a set of key-value pairs known as json. This is very for both humans and computers to understand. That way you can even dump Python objects.
+
+First import the json stuff:
+
+```
+import json
+from flask import jsonify
+```
+
+Second, there are two functions to know: dumps() and loads().
+
+```
+json.dumps(): # convert the dictionary into a json string.
+json.loads(): # convert json strings to dictionaries
+```
+
+They both operate on variables (variables are stored in memory).
+
+That way you can return Python data like a dictionary, as a json object:
+
+```python
+@app.route('/')
+def index():
+    data = {
+    'name':'Ana',
+    'age':'24'
+    }
+    return json.dumps(data) 
+```
+
 ## Template
 
 You can return templates (code rendered onto html) and json also. To work with json, import the jsonify module. To return modules, you must import render_template from flask.
