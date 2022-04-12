@@ -2,8 +2,7 @@
 layout: post
 title: How to Use Flask to Build a Simple Website
 author: john_doe
-date: 2022-04-13 00:04:51
-intro_paragraph: ""
+date: 2022-04-13 00:00:01
 ---
 Python Flask is a popular server-side web framework written in Python. It’s based on Werkzeug and Jinja 2. Flask is an extremely popular framework among developers and is used by thousands of websites and applications. In order to help get you familiar with how to use Flask, this tutorial will show you how to use Flask to build a simple website.
 
