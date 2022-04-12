@@ -20,13 +20,13 @@ Python 3 can be downloaded from the official Python website ([https://www.python
 
 It's recommended to install Flask inside a project environment (virtual environment), so that the version your program depends on doesn't conflict with your system.To do so, make sure virtualenv is installed, you can do so with pip:
 
-```
+```bash
 pip install virtualenv
 ```
 
 Then setup the virtual environment 
 
-```
+```bash
 mkdir newproj
 cd newproj
 virtualenv venv
@@ -34,7 +34,7 @@ virtualenv venv
 
 Then active the environment
 
-```
+```bash
 # linux
 venv/bin/activate
 # windows
@@ -71,6 +71,8 @@ def index():
     return 'hello'
 ```
 
+<br />
+
 Finally, a simple flask program
 
 ```python
@@ -89,6 +91,10 @@ if __name__ == '__main__':
 
 <br />
 
+![python flask web app](/assets/img/uploads/python-flask.png)
+
+<br />
+
 ## Routing with parameters
 
 Basic routing with parameters is possible with Flask. In the example below the route /show1/ can end with any name parameter. 
@@ -101,20 +107,22 @@ def show1(name):
     return '<h1>Name is: %s</h1>' % name
 ```
 
+<br />
+
 ## Json
 
 While functions can return strings (a sequence of characters) they can also return a set of key-value pairs known as json. This is very for both humans and computers to understand. That way you can even dump Python objects.
 
 First import the json stuff:
 
-```
+```python
 import json
 from flask import jsonify
 ```
 
 Second, there are two functions to know: dumps() and loads().
 
-```
+```python
 json.dumps(): # convert the dictionary into a json string.
 json.loads(): # convert json strings to dictionaries
 ```
@@ -132,6 +140,8 @@ def index():
     }
     return json.dumps(data) 
 ```
+
+<br />
 
 ## Template
 
