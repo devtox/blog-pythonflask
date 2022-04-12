@@ -29,13 +29,13 @@ A route is a mapping from a url like /guestbook to a Python function, such as gu
 
 The route that should always exist is the index route.
 
-```
+```python
 @app.route('/')
 ```
 
 This indicates the root path of the website, like localhost:5000/ in the browser.
 
-```
+```python
 @app.route('/')
 @app.route('/index')
 #type localhost:5000/ or localhost:5000/index in your browser to access
@@ -45,7 +45,7 @@ def index():
 
 Finally, a simple flask program
 
-```
+```python
 from flask import Flask
 
 app = Flask(__name__)
@@ -59,14 +59,37 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
+<br />
+
 ## Routing with parameters
 
 Basic routing with parameters is possible with Flask. In the example below the route /show1/ can end with any name parameter. 
 
-```
+```python
 @app.route('/show1/<name>')
 #type localhost:5000/show1/xxx in the browser to access
 def show1(name):
     #In the function name means the parameter passed on the address bar
     return '<h1>Name is: %s</h1>' % name
+```
+
+## Template
+
+You can return templates (code rendered onto html) and json also. To work with json, import the jsonify module. To return modules, you must import render_template from flask.
+
+```python
+from flask import jsonify
+from flask import render_template
+
+from app import app
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/hello", methods=['GET', ])
+def hello():
+    return jsonify(msg="hello world!")
 ```
