@@ -8,9 +8,9 @@ Python Flask is a popular server-side web framework written in Python. It’s ba
 
 ## Exploring Flask Features
 
-Flask is one of many frameworks that are focused on helping you create web servers with Python. There are other frameworks available that you could use, but what makes Flask special? What makes Flask worth learning over one of its competitors? Let’s explore some of the features that make Flask stand out from the crowd.
+Flask is one of many frameworks that are focused on helping you create web servers with Python. There are other frameworks available that you could use, but what makes Flask special? Let's dive into that in this article!
 
-In order to help keep this article shorter, I have decided to split it into two parts. This first part will provide an overview of the features that make Flask a good choice for developing web applications with Python.
+
 
 ## Installation of flask
 
