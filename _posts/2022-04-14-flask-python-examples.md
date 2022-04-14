@@ -8,13 +8,13 @@ This is a collection of examples that highlight some awesome features of Flask, 
 
 Flask is a lightweight Python-based web framework. It is built on Werkzeug and Jinja2, two libraries that handle much of the heavy-lifting that other microframeworks require you to implement yourself.
 
-## Why Flask?
+### Why Flask?
 
 One of the things we love about Flask is its ability to extend with modules, you can easily add different databases (MongoDB, MySQL, Postgres, SQLite). For example, you can use Flask-SQLAlchemy to create a SQL Alchemy ORM.
 
 Flask lets you quickly create Python based web applications. So a great feature of Flask is its extensibility. There are many modules available that provide additional functionality, such as Flask-Login for user session management and Flask-Uploads for handling file uploads.
 
-## Installation
+### Installation
 
 Just install Flask via pip3: 
 
@@ -32,7 +32,7 @@ $ python3
 ```
 <br />
 
-## Hello World
+### Hello World
 
 We write a web application that displays "Hello World!" using Flask, and see how to configure and debug Flask.
 
@@ -105,7 +105,7 @@ app = Flask("my-app", static_folder="path1", template_folder="path2")
 ```
 <br />
 
-## Template
+### Template
 
 A template is a file containing the response text, with a placeholder (variable) representing the dynamic part, telling the template engine that its specific value needs to be obtained from the data used.
 
