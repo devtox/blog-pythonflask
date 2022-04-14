@@ -22,7 +22,7 @@ Just install Flask via pip3:
 $ sudo pip3 install Flask
 $ sudo pip3 install Flask
 ```
-
+<br />
 Go to python interactive mode to see the introduction and version of Flask.
 
 ```python
@@ -45,7 +45,6 @@ mkdir HelloWorld/templates
 touch HelloWorld/server.py
 ```
 <br />
-
 The static and templates directories are the default configuration, where static is used to store static resources, such as images, js, css files, etc. Templates stores template files.
 
 Our website logic is basically in the *server.py* file, but of course, it is possible to give this file other names.
@@ -63,14 +62,14 @@ def hello_world():
 if __name__ == '__main__':
     app.run()
 ```
-
+<br />
 Run server.py.
 
 ```bash
 $ python3 server.py 
 * Running on http://127.0.0.1:5000/
 ```
-
+<br />
 Open a browser and visit http://127.0.0.1:5000/. Hello World! will appear on the browser page.
 
 The following message will be displayed in the terminal.
@@ -78,7 +77,7 @@ The following message will be displayed in the terminal.
 ```
 127.0.0.1 - - [16/May/2014 10:29:08] "GET / HTTP/1.1" 200 -
 ```
-
+<br />
 The variable app is a Flask instance, by the following.
 
 ```python
@@ -86,7 +85,6 @@ The variable app is a Flask instance, by the following.
 def hello_world():
     return 'Hello World!'
 ```
-<br />
 When the client accesses /, it will respond to the content returned by the hello_world() function. 
 
 ## Flask configuration
@@ -96,7 +94,9 @@ Remember you initialized your web app like this:
 ```python
 app = Flask(__name__)
 ```
-In the above code, the value of the python built-in variable __name__ is the string __main__ . The Flask class takes this parameter as the name of the program. This is of course customizable, e.g. app = Flask("my-app").
+In the above code, the value of the python built-in variable __name__ is the string __main__ . 
+
+The Flask class takes this parameter as the name of the program. This is of course customizable, e.g. app = Flask("my-app").
 
 By default, Flask uses the static directory for static resources and the templates directory for templates, which can be changed by setting the following parameter
 
@@ -111,9 +111,9 @@ A template is a file containing the response text, with a placeholder (variable)
 
 Replacing variables with real values and returning the final string is a process called "rendering" Flask uses Jinja2, a template engine, to render templates.
 
-**Jinja2**: is the next widely used template engine for Python, a template language implemented by Python, whose design ideas are derived from Django's template engine and extended with its syntax and a range of powerful features, its a template language built into Flask.
+* **Jinja2**: is the next widely used template engine for Python, a template language implemented by Python.
 
-**Template language**: is a simple text format designed to automatically generate documents. In a template language, some variables are generally passed to the template, replacing pre-defined placeholder variable names in specific locations of the template.
+* **Template language**: is a simple text format designed to automatically generate documents. In a template language, some variables are generally passed to the template, replacing pre-defined placeholder variable names in specific locations of the template.
 
 ```python
 from flask import Flask,render_template
@@ -130,7 +130,6 @@ def hello_world():
 def my_list():
     return render_template('posts/list.html')
 ```
-<br />
 When rendering a template using render_template, you can pass keyword arguments. You can use it directly in the template later.
 
 If you have too many parameters, then you can put all of them into a dictionary and then use two asterisks when passing this dictionary parameter to break the dictionary into key parameters.
@@ -170,8 +169,7 @@ def say_name2():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-<br />
-Then use a jinja2 template to render the data. Jinja2 is basically a webpage in html with Python variables displayed.
+<br />Then use a jinja2 template to render the data. Jinja2 is basically a webpage in html with Python variables displayed.
 
 ```html
 <!DOCTYPE html>
