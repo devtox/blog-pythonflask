@@ -184,6 +184,7 @@ if __name__ == '__main__':
 <br />Then use a jinja2 template to render the data. Jinja2 is basically a webpage in html with Python variables displayed.
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -198,4 +199,5 @@ if __name__ == '__main__':
     <p>{{ childrens['name'] }}</p>
 </body>
 </html>
+{% endraw %}
 ```
