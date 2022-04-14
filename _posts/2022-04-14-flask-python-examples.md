@@ -8,6 +8,8 @@ This is a collection of examples that highlight some awesome features of Flask, 
 
 Flask is a lightweight Python-based web framework. It is built on Werkzeug and Jinja2, two libraries that handle much of the heavy-lifting that other microframeworks require you to implement yourself.
 
+## Why Flask?
+
 One of the things we love about Flask is its ability to extend with modules, you can easily add different databases (MongoDB, MySQL, Postgres, SQLite). For example, you can use Flask-SQLAlchemy to create a SQL Alchemy ORM.
 
 Flask lets you quickly create Python based web applications. So a great feature of Flask is its extensibility. There are many modules available that provide additional functionality, such as Flask-Login for user session management and Flask-Uploads for handling file uploads.
@@ -68,9 +70,9 @@ Run server.py.
 $ python3 server.py 
 * Running on http://127.0.0.1:5000/
 ```
-<br />
+
 Open a browser and visit http://127.0.0.1:5000/. Hello World! will appear on the browser page.
-<br /><br />
+
 The following message will be displayed in the terminal.
 
 ```
@@ -84,7 +86,7 @@ The variable app is a Flask instance, by the following.
 def hello_world():
     return 'Hello World!'
 ```
-
+<br />
 When the client accesses /, it will respond to the content returned by the hello_world() function. 
 
 ## Flask configuration
@@ -105,15 +107,13 @@ app = Flask("my-app", static_folder="path1", template_folder="path2")
 
 ## Template
 
-In large applications, putting business logic and presentation content together can increase code complexity and maintenance costs. You can split presentation into views. A web request returns a template (view).
-
 A template is a file containing the response text, with a placeholder (variable) representing the dynamic part, telling the template engine that its specific value needs to be obtained from the data used.
 
 Replacing variables with real values and returning the final string is a process called "rendering" Flask uses Jinja2, a template engine, to render templates.
 
-Jinja2: is the next widely used template engine for Python, a template language implemented by Python, whose design ideas are derived from Django's template engine and extended with its syntax and a range of powerful features, its a template language built into Flask.
+**Jinja2**: is the next widely used template engine for Python, a template language implemented by Python, whose design ideas are derived from Django's template engine and extended with its syntax and a range of powerful features, its a template language built into Flask.
 
-Template language: is a simple text format designed to automatically generate documents. In a template language, some variables are generally passed to the template, replacing pre-defined placeholder variable names in specific locations of the template.
+**Template language**: is a simple text format designed to automatically generate documents. In a template language, some variables are generally passed to the template, replacing pre-defined placeholder variable names in specific locations of the template.
 
 ```python
 from flask import Flask,render_template
