@@ -86,8 +86,5 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-gems:
-  - jekyll-sitemap
-
-whitelist:
+plugins:
   - jekyll-sitemap
