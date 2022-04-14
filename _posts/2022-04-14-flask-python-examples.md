@@ -30,6 +30,7 @@ $ python3
 >>> import flask
 >>> print(flask.__doc__)
 ```
+
 <br />
 
 ### Hello World
@@ -69,7 +70,7 @@ Run server.py.
 $ python3 server.py 
 * Running on http://127.0.0.1:5000/
 ```
-<br />
+
 Open a browser and visit http://127.0.0.1:5000/. Hello World! will appear on the browser page.
 
 The following message will be displayed in the terminal.
@@ -77,7 +78,7 @@ The following message will be displayed in the terminal.
 ```
 127.0.0.1 - - [16/May/2014 10:29:08] "GET / HTTP/1.1" 200 -
 ```
-<br />
+
 The variable app is a Flask instance, by the following.
 
 ```python
@@ -85,8 +86,11 @@ The variable app is a Flask instance, by the following.
 def hello_world():
     return 'Hello World!'
 ```
-When the client accesses /, it will respond to the content returned by the hello_world() function. 
 
+When the client accesses /, it will respond to the content returned by the hello_world() function. You can return any text, even including HTML code in the string.
+
+![](/assets/img/uploads/python-flask.png)
+<br />
 ## Flask configuration
 
 Remember you initialized your web app like this:
@@ -94,7 +98,8 @@ Remember you initialized your web app like this:
 ```python
 app = Flask(__name__)
 ```
-In the above code, the value of the python built-in variable __name__ is the string __main__ . 
+
+In the above code, the value of the python built-in variable **name** is the string **main** . 
 
 The Flask class takes this parameter as the name of the program. This is of course customizable, e.g. app = Flask("my-app").
 
@@ -103,6 +108,7 @@ By default, Flask uses the static directory for static resources and the templat
 ```python
 app = Flask("my-app", static_folder="path1", template_folder="path2")
 ```
+
 <br />
 
 ### Template
@@ -111,8 +117,11 @@ A template is a file containing the response text, with a placeholder (variable)
 
 Replacing variables with real values and returning the final string is a process called "rendering" Flask uses Jinja2, a template engine, to render templates.
 
-* **Jinja2**: is the next widely used template engine for Python, a template language implemented by Python.
+![python flask templates](/assets/img/uploads/flask-templates.png)
 
+
+
+* **Jinja2**: is the next widely used template engine for Python, a template language implemented by Python.
 * **Template language**: is a simple text format designed to automatically generate documents. In a template language, some variables are generally passed to the template, replacing pre-defined placeholder variable names in specific locations of the template.
 
 ```python
@@ -130,6 +139,7 @@ def hello_world():
 def my_list():
     return render_template('posts/list.html')
 ```
+
 When rendering a template using render_template, you can pass keyword arguments. You can use it directly in the template later.
 
 If you have too many parameters, then you can put all of them into a dictionary and then use two asterisks when passing this dictionary parameter to break the dictionary into key parameters.
@@ -169,6 +179,7 @@ def say_name2():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
+
 <br />Then use a jinja2 template to render the data. Jinja2 is basically a webpage in html with Python variables displayed.
 
 ```html
