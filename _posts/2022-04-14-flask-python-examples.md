@@ -22,7 +22,7 @@ Just install Flask via pip3:
 $ sudo pip3 install Flask
 $ sudo pip3 install Flask
 ```
-<br />
+
 Go to python interactive mode to see the introduction and version of Flask.
 
 ```python
@@ -44,7 +44,7 @@ mkdir HelloWorld/static
 mkdir HelloWorld/templates
 touch HelloWorld/server.py
 ```
-<br />
+
 The static and templates directories are the default configuration, where static is used to store static resources, such as images, js, css files, etc. Templates stores template files.
 
 Our website logic is basically in the *server.py* file, but of course, it is possible to give this file other names.
@@ -62,7 +62,7 @@ def hello_world():
 if __name__ == '__main__':
     app.run()
 ```
-<br />
+
 Run server.py.
 
 ```bash
