@@ -85,3 +85,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+gems:
+  - jekyll-sitemap
+
+whitelist:
+  - jekyll-sitemap
