@@ -102,3 +102,90 @@ By default, Flask uses the static directory for static resources and the templat
 app = Flask("my-app", static_folder="path1", template_folder="path2")
 ```
 
+
+## Template
+
+In large applications, putting business logic and presentation content together can increase code complexity and maintenance costs. You can split presentation into views. A web request returns a template (view).
+
+A template is a file containing the response text, with a placeholder (variable) representing the dynamic part, telling the template engine that its specific value needs to be obtained from the data used.
+
+Replacing variables with real values and returning the final string is a process called "rendering" Flask uses Jinja2, a template engine, to render templates.
+
+Jinja2: is the next widely used template engine for Python, a template language implemented by Python, whose design ideas are derived from Django's template engine and extended with its syntax and a range of powerful features, its a template language built into Flask.
+
+Template language: is a simple text format designed to automatically generate documents. In a template language, some variables are generally passed to the template, replacing pre-defined placeholder variable names in specific locations of the template.
+
+```python
+from flask import Flask,render_template
+
+app = Flask(__name__, template_folder='C:/templates')
+
+# Return a template
+@app.route('/')
+def hello_world():
+    return render_template('index.html')
+
+# Return other template for this url
+@app.route('/list/')
+def my_list():
+    return render_template('posts/list.html')
+```
+<br />
+When rendering a template using render_template, you can pass keyword arguments. You can use it directly in the template later.
+
+If you have too many parameters, then you can put all of them into a dictionary and then use two asterisks when passing this dictionary parameter to break the dictionary into key parameters.
+
+```python
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    context = {
+        'username':'Sandra',
+        'age': 35,
+        'country': 'US',
+        'childrens': {
+            'name':'Tamara',
+            'height': 175
+        }
+    }
+    return render_template('index.html', **context)
+
+
+@app.route('/name2/')
+def say_name2():
+    context = {
+        'username':'Brendy',
+        'age': 33,
+        'country': 'US',
+        'childrens': {
+            'name':'Trevor',
+            'height': 190
+        }
+    }
+    return render_template('index.html', context=context)
+   
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+<br />
+Then use a jinja2 template to render the data. Jinja2 is basically a webpage in html with Python variables displayed.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+    <p>{{ username }}</p>
+    <p>{{ age }}</p>
+    <p>{{ country }}</p>
+    <p>{{ childrens.name }}</p>
+    <p>{{ childrens['name'] }}</p>
+</body>
+</html>
+```
