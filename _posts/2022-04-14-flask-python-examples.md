@@ -2,7 +2,7 @@
 layout: post
 title: Flask Python Examples
 author: john_doe
-date: 2022-04-14 11:52:21
+date: 2022-04-13 11:52:21
 ---
 This is a collection of examples that highlight some awesome features of Flask, a Python web framework. If you're not familiar with Flask, it's a microframework that lets you quickly create an Python based Web application. 
 
