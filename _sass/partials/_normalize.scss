@@ -418,7 +418,11 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid darkslategray;
+  border: 1px solid lightsteelblue;
+}
+
+table td {
+  background: darkslategray;
 }
 
 td,
