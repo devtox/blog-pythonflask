@@ -6,22 +6,8 @@ date: 2022-05-01 11:11:59
 ---
 Flask is a Python-based  web framework and relies on Jinja2 template engine and Werkzeug WSGI. WSGI : Web Server Gateway Interface (WEB Service Gateway Interface), defines the interface format between web app and web server written in python
 
-It uses the MVC and MTV frameworks. So what are these?
-
-2) Flask's framework model - MTV
-
-Classic three-tier structure : MVC pattern
-
-* M : Models , the model layer , responsible for database modeling
-* V : Views, the view layer, used to handle the content displayed by the user, such as :html
-* C : Controller, controller, handle the part of the user interaction. Handles user 
-
-requests and gives responses
-python common: MTV pattern
-* M : Models, the model layer, is responsible for database modeling
-* T : Templates, the template layer, which handles the content displayed by the user, e.g., html
-* V : Views, the view layer, handles the part of the content that interacts with the user. Handles user requests and gives responses
 <br />
+
 ### Install flask
 
 To intsall flask, just use pip.
@@ -89,6 +75,8 @@ def login():
     return 'This is login page.'
 ```
 
+<br />
+
 #### Routing with parameters
 
 Basic routing with parameters
@@ -118,6 +106,8 @@ def show1(name,age):
     return 'xxx'
 ```
 
+<br />
+
 #### Route matching for multiple URLs
 
 Allows to set multiple url routing rules in one view handler
@@ -128,6 +118,8 @@ Allows to set multiple url routing rules in one view handler
 def index():
     return "xxx"
 ```
+
+<br />
 
 #### Setting HTTP request methods in routing
         
@@ -140,6 +132,8 @@ If no request method is specified, GET requests are allowed by default
 def post():
     return 'xxxx'
 ```
+
+<br />
 
 #### Reverse Parsing
 
@@ -161,6 +155,29 @@ def show(name):
 
 url_for('index') : the result is : /
 url_for('show',name='qtx') : The result is : /show/qtx
+
+<br />
+
+### Flask models
+
+It uses the MVC and MTV frameworks. So what are these?
+
+#### MVC pattern
+
+* M : Models , the model layer , responsible for database modeling
+* V : Views, the view layer, used to handle the content displayed by the user, such as :html
+* C : Controller, controller, handle the part of the user interaction. Handles user 
+requests and gives responses
+
+<br />
+
+#### MTV pattern
+
+* M : Models, the model layer, is responsible for database modeling
+* T : Templates, the template layer, which handles the content displayed by the user, e.g., html
+* V : Views, the view layer, handles the part of the content that interacts with the user. Handles user requests and gives responses
+
+<br />
 
 ### Flask templates
 #### What is Template
