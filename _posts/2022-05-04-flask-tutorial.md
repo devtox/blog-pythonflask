@@ -21,6 +21,7 @@ Enter python3 interactive mode.
 >>>import flask
 >>>flask.__version__
 ```
+
 Note: There will be slight differences between versions, try to focus on the teaching environment
 
 ### Initialize the flask application
@@ -48,6 +49,8 @@ if __name__ == '__main__':
 After running the application, it will start the small server that comes with flask, the default port number to open locally is 5000
 
 *debug=True*, is to change the current startup mode to debug mode (debug mode is recommended in development environment, not allowed in production environment)
+
+![](/assets/img/uploads/python-flask.png)
 
 ### Flask-route
 
@@ -114,7 +117,7 @@ def index():
 ```
 
 #### Setting HTTP request methods in routing
-        
+
 Flask routing rules also allow setting the corresponding request method, and only the path matching the request method will be given to the view handler for execution
 If no request method is specified, GET requests are allowed by default
 
@@ -157,7 +160,7 @@ It uses the MVC and MTV frameworks. So what are these?
 * M : Models , the model layer , responsible for database modeling
 * V : Views, the view layer, used to handle the content displayed by the user, such as :html
 * C : Controller, controller, handle the part of the user interaction. Handles user 
-requests and gives responses
+  requests and gives responses
 
 <br />
 
@@ -170,6 +173,7 @@ requests and gives responses
 <br />
 
 ### Flask templates
+
 #### What is Template
 
 Template is a file containing response text (usually html file)
@@ -179,7 +183,7 @@ Templates are allowed to contain "placeholder variables" to represent dynamic co
 The template is also eventually parsed into a response string, a process called "rendering".
 
 #### Default template directory
-    
+
 By default, Flask will look for templates in the templates subfolder of the application folder
 
 Note: You need to create templates folder manually
@@ -192,11 +196,12 @@ You can modify the configuration to specify a filename string for the template_f
 app = Flask(__name__,template_folder='templates') # Configure the folder for template files
 ```
 
-####  Template syntax
+#### Template syntax
 
 The syntax of templates is html mixed with code:
 
 {% raw %}
+
 ```python
 placeholder variables {{ variable name }}
 comment {# content to comment #}
@@ -211,4 +216,5 @@ tag {% tag name %}
 {% for variable name in iterable object %}
 {% endfor %}
 ```
+
 {% endraw %}
