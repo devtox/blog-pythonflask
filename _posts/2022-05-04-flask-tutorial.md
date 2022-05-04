@@ -2,7 +2,7 @@
 layout: post
 title: Flask Tutorial
 author: john_doe
-date: 2022-05-03 11:11:59
+date: 2022-05-01 11:11:59
 ---
 Flask is a Python-based  web framework and relies on Jinja2 template engine and Werkzeug WSGI. WSGI : Web Server Gateway Interface (WEB Service Gateway Interface), defines the interface format between web app and web server written in python
 
