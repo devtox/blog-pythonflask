@@ -189,6 +189,7 @@ app = Flask(__name__,template_folder='templates') # Configure the folder for tem
 
 The syntax of templates is html mixed with code:
 
+{% raw %}
 ```python
 placeholder variables {{ variable name }}
 comment {# content to comment #}
@@ -203,3 +204,4 @@ tag {% tag name %}
 {% for variable name in iterable object %}
 {% endfor %}
 ```
+{% endraw %}
