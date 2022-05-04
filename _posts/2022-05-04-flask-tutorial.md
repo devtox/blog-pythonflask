@@ -75,7 +75,6 @@ def index():
 def login():
     return 'This is login page.'
 ```
-<br />
 
 #### Routing with parameters
 
@@ -105,7 +104,6 @@ def show1(name,age):
     # In the function, name is the data passed in the address bar
     return 'xxx'
 ```
-<br />
 
 #### Route matching for multiple URLs
 
@@ -117,7 +115,6 @@ Allows to set multiple url routing rules in one view handler
 def index():
     return "xxx"
 ```
-<br />
 
 #### Setting HTTP request methods in routing
 
@@ -130,7 +127,6 @@ If no request method is specified, GET requests are allowed by default
 def post():
     return 'xxxx'
 ```
-<br />
 
 #### Reverse Parsing
 
