@@ -6,8 +6,6 @@ date: 2022-05-01 11:11:59
 ---
 Flask is a Python-based  web framework and relies on Jinja2 template engine and Werkzeug WSGI. WSGI : Web Server Gateway Interface (WEB Service Gateway Interface), defines the interface format between web app and web server written in python
 
-<br />
-
 ### Install flask
 
 To intsall flask, just use pip.
@@ -43,13 +41,13 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-@app.route(): route definition in Flask, defines the user's access path, / represents the root path of the whole site
+*@app.route():* route definition in Flask, defines the user's access path, / represents the root path of the whole site
 
-def index(): @app.route() path after the handler-view function, the function must have return, return to a string or response object
+*def index():* @app.route() path after the handler-view function, the function must have return, return to a string or response object
 
 After running the application, it will start the small server that comes with flask, the default port number to open locally is 5000
 
-debug=True, is to change the current startup mode to debug mode (debug mode is recommended in development environment, not allowed in production environment)
+*debug=True*, is to change the current startup mode to debug mode (debug mode is recommended in development environment, not allowed in production environment)
 
 ### Flask-route
 
@@ -74,8 +72,6 @@ def index():
 def login():
     return 'This is login page.'
 ```
-
-<br />
 
 #### Routing with parameters
 
@@ -106,8 +102,6 @@ def show1(name,age):
     return 'xxx'
 ```
 
-<br />
-
 #### Route matching for multiple URLs
 
 Allows to set multiple url routing rules in one view handler
@@ -118,8 +112,6 @@ Allows to set multiple url routing rules in one view handler
 def index():
     return "xxx"
 ```
-
-<br />
 
 #### Setting HTTP request methods in routing
         
@@ -132,8 +124,6 @@ If no request method is specified, GET requests are allowed by default
 def post():
     return 'xxxx'
 ```
-
-<br />
 
 #### Reverse Parsing
 
